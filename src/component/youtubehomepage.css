@@ -1,0 +1,194 @@
+.youtubehome {
+    display: flex;
+   
+
+}
+
+.youtube-left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.25;
+    height: 96vh;
+
+}
+
+.youtube-right {
+    /* border-top: 1px solid #111; */
+    flex: .74;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.main-list {
+    height: 40px;
+    color: #111;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    padding: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.underline {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #606060;
+    margin-bottom: 20px;
+}
+
+.youtube-right {
+    height: 290px;
+    width: 98%;
+    margin: 0 5px;
+
+}
+
+.homepage-video {
+    height: 290px;
+    width: 296px;
+    position: relative;
+    padding: 0 10px;
+    transition-delay: 1.5s;
+    cursor: pointer;
+    margin-top: 10px;
+
+}
+
+.homepage-video:hover {
+    transform: scale(1.2);
+    z-index: 1;
+
+
+
+
+
+}
+
+.timing {
+    position: absolute;
+    top: 145px;
+    bottom: 0;
+    right: 10px;
+    height: 12px;
+    width: 30px;
+    padding: 0 5px;
+    font-size: 14px;
+    /* text-align: calc(100%-10px); */
+    color: #fff;
+
+}
+
+.videoimage {
+    width: 296px;
+    height: 166px;
+
+}
+
+.account-channel {
+    width: 45px;
+    height: 45px;
+
+}
+
+.account-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.video-description {
+    display: flex;
+    height: 100px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    width: 223px;
+    height: 40px;
+    overflow: hidden;
+
+}
+
+.title>p {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+.channel-name {
+
+    margin-top: 10px;
+    color: #606060;
+    width: 223px;
+    height: 18px;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.view {
+    display: flex;
+    align-items: center;
+    color: #606060;
+    width: 223px;
+    font-size: 15px;
+    height: 18px;
+}
+
+.dot {
+    margin: 0 4px;
+}
+
+.subscrition {
+    padding: 0 26px;
+    cursor: pointer;
+}
+
+.subscrition>span {
+    font-size: 18px;
+    color: #111;
+    padding-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.subs-channel {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 12px;
+
+}
+
+.sidebar-channel {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.channelName {
+    padding-left: 20px;
+}
+ /* .items{
+    display: inline-block;
+    width: 100px;
+    border: 1px solid red;
+} */
+/* .home-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 30px;
+    padding-left:  17px;
+
+}  */
