@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
@@ -9,11 +9,16 @@ import './header.css';
 // import Youtubehomepage from './youtubehomepage';
 
 function Header() {
+    const [menu ,setMenu]=useState(false)
+    const show =()=>{
+       return setMenu(true)
+        
+    }
     return (
         <div className='header'>
             <div className='menu'>
                 <div className='header-icon'>
-                    <MenuIcon className='menuicon' style={{ width: '30px', height: '30px', color: '#606060' }} />
+                    <MenuIcon className='menuicon' style={{ width: '30px', height: '30px', color: '#606060' }} onClick={show} />
                 </div>
                 <img src='../New folder/YouTubelogo.jpg' alt='logo' className='youtubelogo' />
             </div>

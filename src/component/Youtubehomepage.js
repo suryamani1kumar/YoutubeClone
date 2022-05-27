@@ -30,7 +30,7 @@ function Youtubehomepage() {
         <div className='youtube-right'>
 
           {data.map((dates) => {
-            const { Img, Timing, Title, ChannelName, View, Uploadtiming } = dates
+            const { Img, Timing, Title, ChannelName, View, Uploadtiming,id } = dates
             return (
               <Video
                 Img={Img}
@@ -39,6 +39,7 @@ function Youtubehomepage() {
                 ChannelName={ChannelName}
                 View={View}
                 Uploadtiming={Uploadtiming}
+                id={id}
               />
             )
 

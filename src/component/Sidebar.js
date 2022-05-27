@@ -8,8 +8,8 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SlideshowOutlinedIcon from '@mui/icons-material/SlideshowOutlined';
-import NotesOutlinedIcon from '@mui/icons-material/NotesOutlined';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 
 function Sidebar() {
     return (
@@ -52,7 +52,7 @@ function Sidebar() {
                 <span className='list'>Your videos</span>
             </div>
             <div className='main-list underline'>
-                <NotesOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
+                <PlaylistPlayIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
                 <span className='list'>Song</span>
             </div>
             <div className='subscrition'>
