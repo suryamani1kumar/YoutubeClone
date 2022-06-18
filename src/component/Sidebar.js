@@ -13,72 +13,77 @@ import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 
 function Sidebar() {
     return (
-        <div className='youtube-left'>
-            <div className='main-list'>
-                <HomeIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Home</span>
-            </div>
-            <div className='main-list  '>
-                <ExploreOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Explore</span>
-            </div>
-            <div className='main-list'>
-                <FavoriteBorderOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Shorts</span>
-            </div>
-            <div className='main-list underline'>
-                <SubscriptionsOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Subscription</span>
-            </div>
-            <div className='main-list'>
-                <VideoLibraryOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Library</span>
-            </div>
-            <div className='main-list'>
-                <RestoreRoundedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>History</span>
-            </div>
+        <div className='sidebar'>
+            <div className='left'>
 
-            <div className='main-list'>
-                <ThumbUpOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px ' }} />
-                <span className='list'>Liked videos</span>
-            </div>
-            <div className='main-list'>
-                <WatchLaterOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Watch Later</span>
-            </div>
-            <div className='main-list'>
-                <SlideshowOutlinedIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Your videos</span>
-            </div>
-            <div className='main-list underline'>
-                <PlaylistPlayIcon style={{ width: '30px', height: '30px', color: '#606060', padding: '0 10px' }} />
-                <span className='list'>Song</span>
-            </div>
-            <div className='subscrition'>
-                <span>Subscription</span>
 
-                <div className='subs-channel'>
-                    <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
-                    <span className='channelName'>Name of channel</span>
+                <div className='main-list'>
+                    <HomeIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Home</span>
                 </div>
-                <div className='subs-channel'>
-                    <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
-                    <span className='channelName'>Name of channel</span>
+                <div className='main-list  '>
+                    <ExploreOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Explore</span>
                 </div>
-                <div className='subs-channel'>
-                    <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
-                    <span className='channelName'>Name of channel</span>
+                <div className='main-list'>
+                    <FavoriteBorderOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Shorts</span>
                 </div>
-                <div className='subs-channel'>
-                    <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
-                    <span className='channelName'>Name of channel</span>
+                <div className='main-list underline'>
+                    <SubscriptionsOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Subscription</span>
                 </div>
-                <div className='subs-channel'>
-                    <KeyboardArrowDownOutlinedIcon/>
-                    <span className='channelName'>Show 21 mores</span>
+                <div className='main-list'>
+                    <VideoLibraryOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Library</span>
+                </div>
+                <div className='main-list'>
+                    <RestoreRoundedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>History</span>
                 </div>
 
+                <div className='main-list'>
+                    <ThumbUpOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px ' }} />
+                    <span className='list'>Liked videos</span>
+                </div>
+                <div className='main-list'>
+                    <WatchLaterOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Watch Later</span>
+                </div>
+                <div className='main-list'>
+                    <SlideshowOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Your videos</span>
+                </div>
+                <div className='main-list underline'>
+                    <PlaylistPlayIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                    <span className='list'>Song</span>
+                </div>
+                {/* <div className='subscrition'>
+                    <span>Subscription</span>
+
+                    <div className='subs-channel'>
+                        <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
+                        <span className='channelName'>Name of channel</span>
+                    </div>
+                    <div className='subs-channel'>
+                        <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
+                        <span className='channelName'>Name of channel</span>
+                    </div>
+                    <div className='subs-channel'>
+                        <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
+                        <span className='channelName'>Name of channel</span>
+                    </div>
+                    <div className='subs-channel'>
+                        <img src='../New folder/Tarak.jpg' alt='channel' className='sidebar-channel' />
+                        <span className='channelName'>Name of channel</span>
+                    </div>
+                    <div className='subs-channel'>
+                        <KeyboardArrowDownOutlinedIcon />
+                        <span className='channelName'>Show 21 mores</span>
+                        
+                    </div>
+
+                </div> */}
             </div>
         </div>
     )

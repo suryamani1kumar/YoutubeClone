@@ -3,11 +3,12 @@
     align-items: center;
     height: 56px;
     color: #111111;
-    width: 96.5%;
-    margin: 0 10px;
-    position: static;
-
-   
+    width: 100%;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 555;
+    background-color: white;
 }
 
 .search {
@@ -15,7 +16,6 @@
     align-items: center;
     width: 50%;
     margin: 0 10px;
-
 }
 
 .searchinput {
@@ -24,9 +24,6 @@
     align-items: center;
     border: 1px solid #909090;
     border-radius: 2px;
-
-
-
 }
 
 .searchinput>input {
@@ -44,9 +41,7 @@
     border-left: 1px solid #111111;
     padding: 5px 20px;
     background: #f8f8f8;
-
-
-
+    cursor: pointer;
 }
 
 .header-icon {
@@ -58,21 +53,53 @@
     justify-content: center;
     margin: 0 15px;
     padding: 5px;
+    position: relative;
+    cursor: pointer;
 }
 
 .bg-light {
     background-color: #f8f8f8;
 }
 
+.hidden {
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 30px;
+    left: -54px;
+    background-color: #909090;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    display: none;
+    border-radius: 2px;
+    opacity: .9;
+}
+
+.header-icon:hover .hidden {
+    display: block;
+}
+
 .menu {
     width: 24%;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    position: relative;
 }
 
 .menuicon {
     padding: 0 10px;
     font-size: 100px;
+}
+
+.toogle {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    background-color: aqua;
+
 }
 
 .youtubelogo {

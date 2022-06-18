@@ -3,6 +3,7 @@ import './youtubehomepage.css'
 import Video from './Video';
 import data from './Data'
 import Sidebar from './Sidebar';
+// import { Link } from 'react-router-dom';
 
 function Youtubehomepage() {
   return (
@@ -11,7 +12,7 @@ function Youtubehomepage() {
         <Sidebar />
       </div>
       {/* <div className='video-section'> */}
-        {/* <div className='home-list' >
+      {/* <div className='home-list' >
           <span className='items'>All</span>
           <span className='items'>Music</span>
           <span className='items'>Live</span>
@@ -27,28 +28,31 @@ function Youtubehomepage() {
           <span className='items'>Cricket</span>
           <span className='items'>Mantras</span>
         </div> */}
-        <div className='youtube-right'>
+      <div className='youtube-right'>
+        {/* <Link to='second'> */}
 
-          {data.map((dates) => {
-            const { Img, Timing, Title, ChannelName, View, Uploadtiming,id } = dates
-            return (
-              <Video
-                Img={Img}
-                Timing={Timing}
-                Title={Title}
-                ChannelName={ChannelName}
-                View={View}
-                Uploadtiming={Uploadtiming}
-                id={id}
-              />
-            )
-
-
-          })}
-
+        {data.map((dates) => {
+          const { Img, Timing, Title,ChannelImg, ChannelName, View, Uploadtiming, id } = dates
+          return (
+            <Video
+              Img={Img}
+              Timing={Timing}
+              Title={Title}
+              ChannelImg={ChannelImg}
+              ChannelName={ChannelName}
+              View={View}
+              Uploadtiming={Uploadtiming}
+              key={id}
+            />
+          )
 
 
-        </div>
+        })}
+        {/* </Link> */}
+
+
+
+      </div>
 
       {/* </div> */}
 

@@ -1,9 +1,11 @@
-export default (state,action)=>{
+import data from "../component/Data"
+
+ const Reducer=(state=data,action)=>{
     switch(action.type){
         case'add':{
             return{
                 ...state,
-               data:[...state, action.payload]
+               data:[ action.payload]
             }
         }
         default:{
@@ -15,3 +17,4 @@ export default (state,action)=>{
 
     }
 }
+export default Reducer
