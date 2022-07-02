@@ -49,14 +49,11 @@
     height: 36px;
     object-fit: cover;
     border-radius: 50%;
-
 }
 
 .description {
-
     width: 200px;
     padding-right: 8px;
-
 }
 
 .title {
@@ -75,10 +72,7 @@
     text-overflow: ellipsis;
     font-size: 17px;
     font-weight: 600;
-
     color: #151515;
-
-
 }
 
 .vertical {
@@ -118,15 +112,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .homepage-video:hover {
-    /* font-size: 10px; */
     transform: scale(1.3);
     height: 380px;
     z-index: 1;
-
 }
 
 .homepage-video:hover .block {

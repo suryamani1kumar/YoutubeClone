@@ -1,90 +1,78 @@
 import React from 'react'
-// import  data from './Data'
-import { useContext } from 'react'
-import { Globalcontext } from '../context/GlobalContext'
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import './video.css'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import MoreVert from '@mui/icons-material/MoreVert';
+import { useDispatch } from 'react-redux';
+import { showVideo } from '../redux/action'
+import { Link } from 'react-router-dom';
 
 
-function Video({ Img, Timing, Title,ChannelImg, ChannelName, View, Uploadtiming, id }) {
-    const { data, watching } = useContext(Globalcontext)
 
-    const show = () => {
-        const send = {
-            Img: Img,
-            Timing: Timing,
-            Title: Title,
-            ChannelName: ChannelName,
-            View: View,
-            Uploadtiming: Uploadtiming,
-            id: id
+function Video({ Img, Timing, Title, ChannelImg, ChannelName, View, Uploadtiming, }) {
 
-        }
-        watching(send)
-        console.log(data)
+   
 
+    // const dispatch = useDispatch()
+    const videoHandle = () => {
 
+        // dispatch(showVideo(Img, Title, ChannelImg, ChannelName, View, Uploadtiming,))
     }
     return (
         <div className='homepage-video'>
-            <div className='thumbnails'>
-                <img src={Img} alt='Thumbnails ' className='videoimage' onClick={show} />
-                <span className='timing'>{Timing}</span>
-            </div>
-
-            <div className='video-description'>
-
-                <div className='account-channel'>
-                    <img src={ChannelImg} alt='channel logo' className='account-img' />
+            <Link to='/videotwo' style={{ textDecoration: 'none' }}>
+                <div onClick={videoHandle}>
+                    <div className='thumbnails' >
+                        <img
+                            src={Img}
+                            alt='Thumbnails '
+                            className='videoimage'
+                        />
+                        <span
+                            className='timing'>{Timing}</span>
+                    </div>
+                    <div className='video-description'>
+                        <div className='account-channel'>
+                            <img
+                                src={ChannelImg}
+                                alt='channel logo'
+                                className='account-img'
+                            />
+                        </div>
+                        <div className='description'>
+                            <div className='title'>
+                                <p>{Title}</p>
+                            </div>
+                            < div className='channel-name'>
+                                <span>
+                                    {ChannelName}
+                                </span>
+                            </div>
+                            <div className='view'>
+                                <span>{View}</span>
+                                <span className='dot'>.</span>
+                                <span >{Uploadtiming}</span>
+                            </div>
+                            <div className="vertical">
+                                <MoreVert />
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
-                <div className='description'>
-
-                    <div className='title'>
-                        <p>{Title}</p>
-                    </div>
-                    < div className='channel-name'>
-                        <span>
-                            {ChannelName}
-                        </span>
-                    </div>
-                    <div className='view'>
-                        <span>{View}</span>
-                        <span className='dot'>.</span>
-                        <span >{Uploadtiming}</span>
-                    </div>
-                    <div className="vertical">
-                        <MoreVert />
-                    </div>
-
-
-
-
-
-                </div>
-
-            </div>
+            </Link>
             <div className='block'>
-
-                <button className='video-button' style={{ marginTop: '30px' }}>
-                    <WatchLaterOutlinedIcon style={{ width: '25px', height: '25px', color: '#606060', padding: '0 10px' }} />
+                <button
+                    className='video-button'
+                    style={{ marginTop: '30px' }}>
+                    <WatchLaterOutlinedIcon />
                     <span>WATCH LATER</span>
                 </button>
                 <button className='video-button'>
-                    <PlaylistPlayIcon style={{ width: '28px', height: '28px', color: '#606060', padding: '0 10px' }} />
+                    <PlaylistPlayIcon />
                     <span>ADD TO QUEUE</span>
-
                 </button>
-
-
-
             </div>
-
-        </div>
+        </div >
     )
 }
 

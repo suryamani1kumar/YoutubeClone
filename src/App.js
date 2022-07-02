@@ -1,30 +1,23 @@
-
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import Homepage from './component/Homepage'
+import store from './redux/reducer'
+import { Provider } from 'react-redux';
 import Header from './component/Header';
 import Youtubehomepage from './component/Youtubehomepage';
-import Second from './component/Second';
-import { ContextProvider } from './context/GlobalContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import WatchVideo from './page/WatchVideo';
+
+
 function App() {
   return (
     <div className="App">
-      <ContextProvider>
+      <Provider store={store}>
         <Header />
         <Routes>
-          {/* <Route path='/' element={<Homepage/>}/> */}
-          {/* <Route path='/' element={<Header/>}/> */}
           <Route path='/' element={<Youtubehomepage />} />
-          <Route path='/second' element={<Second />} />
-
-
-
-
+          <Route path='/watchvideo' element={<WatchVideo />} />
         </Routes>
-      </ContextProvider>
-
-
-
+      </Provider>
     </div>
   )
 }

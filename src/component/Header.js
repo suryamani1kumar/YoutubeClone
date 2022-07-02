@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
@@ -6,56 +6,143 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
 import './header.css';
-// import Youtubehomepage from './youtubehomepage';
+import { useSelector, useDispatch } from 'react-redux';
 import Sidebar from './Sidebar';
+import {
+    showHomeMenuToggle,
+    showCreateViedoToggle,
+    showNotificationsToggle,
+    showAccountToggle
+} from '../redux/action'
+import HomeIcon from '@mui/icons-material/Home';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
+import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+import HeaderVideo from './Header/HeaderVideo.tsx';
+import Notification from './Header/Notification.tsx';
+import Account from './Header/Account.js';
+
+
 
 function Header() {
-    const [toggle, setToggle] = useState(false)
-    const [toggle1, setToggle1] = useState(false)
+    const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
+    const setCreateViedotoggle = useSelector((state) => state.showCreateViedo)
+    const setNotificationstoggle = useSelector((state) => state.showNotifications)
+    const setAccounttoggle = useSelector((state) => state.showAccount)
+    const dispatch = useDispatch()
+    const handleMenu = () => {
+        dispatch(showHomeMenuToggle())
+    }
+    const handleVideo = () => {
+        dispatch(showCreateViedoToggle())
+    }
 
+    const handleNotification = () => {
+        dispatch(showNotificationsToggle())
+    }
+    const handleAccount = () => {
+        dispatch(showAccountToggle())
+    }
     return (
         <div className='header'>
             <div className='menu'>
                 <div className='header-icon'>
-                    <MenuIcon className='menuicon' style={{ width: '25px', height: '25px', color: '#606060' }} onClick={() => setToggle(!toggle)} />
-
+                    <MenuIcon
+                        onClick={handleMenu}
+                    />
                 </div>
-                <img src='../New folder/YouTubelogo.jpg' alt='logo' className='youtubelogo' />
+                <img
+                    src='../New folder/YouTubelogo.jpg'
+                    alt='logo'
+                    className='youtubelogo' />
                 <p className='hidden'>YouTube Home</p>
-                {
-                    toggle ? <div className='toogle'>xxx</div> : <Sidebar/>
-                }
-
+                {/* {setHomeMenutoggle ?
+                    <div style={{ position: 'absolute', top: "50px" }}>
+                        <div
+                            className='d-flex flex-column mb-1'>
+                            <HomeIcon />
+                            <span>Home</span>
+                        </div>
+                        <div
+                            className='d-flex flex-column mb-1'>
+                            <ExploreOutlinedIcon />
+                            <span>Explore</span>
+                        </div>
+                        <div
+                            className='d-flex flex-column mb-1'>
+                            <FavoriteBorderOutlinedIcon />
+                            <span>Shorts</span>
+                        </div>
+                        <div
+                            className='d-flex flex-column mb-1'>
+                            <SubscriptionsOutlinedIcon />
+                            <span>Subscriptions</span>
+                        </div>
+                        <div
+                            className='d-flex flex-column mb-1'>
+                            <VideoLibraryOutlinedIcon />
+                            <span>Library</span>
+                        </div>
+                    </div>
+                    :
+                    <div style={{ position: 'absolute', top: "50px",}}>
+                        <Sidebar />
+                    </div>
+                } */}
             </div>
-
             <div className='search'>
                 <div className='searchinput'>
                     <input type='text' placeholder='Search' />
-                    <SearchIcon className='searchicon' style={{ color: '#606060' }} />
+                    <SearchIcon
+                    />
                     <p className='hidden'>Search</p>
                 </div>
                 <div className='header-icon bg-light'>
-                    <KeyboardVoiceIcon className='voiceIcon' />
+                    <KeyboardVoiceIcon
+                        className='voiceIcon' />
                     <p className='hidden'>Search with your voice</p>
 
                 </div>
             </div>
-
             <div className='header-right'>
-                <div className='header-icon'>
-                    <VideoCallOutlinedIcon className='videocall' style={{ width: '25px', height: '25px', color: '#606060' }} onClick={() => setToggle1(!toggle1)} />
-                    <p className='hidden' style={{ width: '80px', position: "absolute", left: "-18px" }} >Create</p>
-                    {toggle1 ? <div>ddd</div> : null}
+                <div className='header-icon'
+                    style={{ position: 'relative' }}>
+                    <VideoCallOutlinedIcon
+                        onClick={handleVideo}
+                    />
+                    <p
+                        className='hidden'
+                        style={{ width: '80px', position: "absolute", left: "-18px" }}
+                    >Create</p>
+                    {setCreateViedotoggle ?
+                        <HeaderVideo />
+                        : null
+                    }
                 </div>
                 <div className='header-icon'>
-                    <NotificationsNoneOutlinedIcon className='notification' style={{ width: '25px', height: '25px', color: '#606060' }} />
-                    <p className='hidden' style={{ width: '100px', position: "absolute", left: '-28px' }}>Notifications</p>
+                    <NotificationsNoneOutlinedIcon
+                        onClick={handleNotification} />
+                    <p
+                        className='hidden'
+                        style={{ width: '100px', position: "absolute", left: '-28px' }}
+                    >Notifications</p>
+                    {setNotificationstoggle ?
+                        <Notification /> :
+                        null
+                    }
                 </div>
-                <div className='header-icon'>
-                    <AccountCircleIcon className='account' style={{ width: '25px', height: '25px', color: '#606060' }} />
+                <div className='header-icon '>
+                    <AccountCircleIcon
+                        onClick={handleAccount} />
+                    {
+                        setAccounttoggle ?
+                            <Account /> :
+                            null
+                    }
                 </div>
             </div>
-            {/* <Youtubehomepage/> */}
+
         </div>
     )
 }
