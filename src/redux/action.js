@@ -26,6 +26,12 @@ export function showAccountToggle() {
     }
 }
 
+export function showSettingToggle() {
+    return {
+        type: 'SHOWSETTING'
+    }
+}
+
 // export function showVideo(imgs, titles, ChannelImgs, ChannelNames, Views, Uploadtiming) {
 //     return {
 //         type: SHOWVIDEO,

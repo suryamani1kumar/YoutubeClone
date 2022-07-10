@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import './youtubehomepage.css'
 import Video from './Video';
-// import data from './Data'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import { setvideo } from '../redux/action'

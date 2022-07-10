@@ -7,10 +7,10 @@ import axios from 'axios'
 
 
 class WatchVideo extends Component {
-    componentDidMount() {
-        axios.get('http://localhost:3001/watch')
-          .then(data => console.log(data.data.data))
-      }
+    // componentDidMount() {
+    //     axios.get('http://localhost:3001/watch')
+    //       .then(data => console.log(data.data.data))
+    //   }
 
 
     render() {
@@ -21,18 +21,7 @@ class WatchVideo extends Component {
                 </Watchfirstcontainer>
                 <Watchsecondcontainer>
                     <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
-                    <LeftSideVideo />
+                    {/* <LeftSideVideo /> */}
                 </Watchsecondcontainer>
             </WatchMaincontainer>
         )

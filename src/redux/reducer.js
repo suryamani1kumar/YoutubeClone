@@ -1,14 +1,12 @@
 import { createStore } from 'redux'
 
-// import {
-//     SHOWVIDEO
-// } from './action'
 
 export const initialstate = {
     showHomeMenu: false,
     showCreateViedo: false,
     showNotifications: false,
     showAccount: false,
+    showSetting: false,
     data: []
 
 }
@@ -47,8 +45,13 @@ export function createreducer(state = initialstate, action) {
         //         Uploadtiming:action.payload.Uploadtiming
         //     })
         // }
-        case 'SETVIDEO':return{
-            data:action.payload
+        case 'SETVIDEO': return {
+            data: action.payload
+        }
+
+        case 'SHOWSETTING': return {
+            ...state,
+            showSetting: !state.showSetting
         }
 
         default: return state

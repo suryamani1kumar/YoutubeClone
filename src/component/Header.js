@@ -115,7 +115,7 @@ function Header() {
                         className='hidden'
                         style={{ width: '80px', position: "absolute", left: "-18px" }}
                     >Create</p>
-                    {setCreateViedotoggle ?
+                    {  setCreateViedotoggle ?
                         <HeaderVideo />
                         : null
                     }
