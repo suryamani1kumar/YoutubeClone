@@ -7,7 +7,7 @@ import ToggleOffOutlinedIcon from '@mui/icons-material/ToggleOffOutlined';
 import PictureInPictureAltIcon from '@mui/icons-material/PictureInPictureAlt';
 import SubtitlesIcon from '@mui/icons-material/Subtitles';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+// import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import Slider from '@mui/material/Slider';
 import LeftSideVideo from './LeftSideVideo';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -69,7 +69,7 @@ class RightSideVideo extends Component {
         return (
             <>
                 <Watchv>
-                    <img src='https://th.bing.com/th/id/R.6afc61b50aabe45a2e6c68eae2c217ba?rik=L2W0YWncfjZBVA&riu=http%3a%2f%2fwww.shutterstock.com%2fblog%2fwp-content%2fuploads%2fsites%2f5%2f2016%2f03%2ffall-trees-road-1.jpg&ehk=KA%2bzFrmYoWsdK4k7v%2fgfNkd1T2rdnNtpF5ICdLIxAeM%3d&risl=&pid=ImgRaw&r=0' />
+                    <img src='https://th.bing.com/th/id/R.6afc61b50aabe45a2e6c68eae2c217ba?rik=L2W0YWncfjZBVA&riu=http%3a%2f%2fwww.shutterstock.com%2fblog%2fwp-content%2fuploads%2fsites%2f5%2f2016%2f03%2ffall-trees-road-1.jpg&ehk=KA%2bzFrmYoWsdK4k7v%2fgfNkd1T2rdnNtpF5ICdLIxAeM%3d&risl=&pid=ImgRaw&r=0' alt='imageofthemnail'/>
                     <MediaControl>
                         <div>
                             <button onClick={this.playButtonhandle}>

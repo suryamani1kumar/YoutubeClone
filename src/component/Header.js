@@ -7,18 +7,18 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
 import './header.css';
 import { useSelector, useDispatch } from 'react-redux';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 import {
     showHomeMenuToggle,
     showCreateViedoToggle,
     showNotificationsToggle,
     showAccountToggle
 } from '../redux/action'
-import HomeIcon from '@mui/icons-material/Home';
-import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
-import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+// import HomeIcon from '@mui/icons-material/Home';
+// import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+// import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
+// import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
 import HeaderVideo from './Header/HeaderVideo.tsx';
 import Notification from './Header/Notification.tsx';
 import Account from './Header/Account.js';
@@ -26,7 +26,7 @@ import Account from './Header/Account.js';
 
 
 function Header() {
-    const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
+    // const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
     const setCreateViedotoggle = useSelector((state) => state.showCreateViedo)
     const setNotificationstoggle = useSelector((state) => state.showNotifications)
     const setAccounttoggle = useSelector((state) => state.showAccount)

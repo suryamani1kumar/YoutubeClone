@@ -3,8 +3,8 @@ import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import './video.css'
 import MoreVert from '@mui/icons-material/MoreVert';
-import { useDispatch } from 'react-redux';
-import { showVideo } from '../redux/action'
+// import { useDispatch } from 'react-redux';
+// import { showVideo } from '../redux/action'
 import { Link } from 'react-router-dom';
 
 

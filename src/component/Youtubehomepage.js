@@ -18,7 +18,7 @@ function Youtubehomepage() {
   useEffect(() => {
     getvideo();
 
-  }, [])
+  },[])
 
   return (
     <div className='youtubehome'>
