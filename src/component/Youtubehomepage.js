@@ -12,13 +12,15 @@ function Youtubehomepage() {
   const daata = useSelector((state) => state.data)
   const dispatch = useDispatch()
   const getvideo = () => {
-    axios.get('http://localhost:3001/video')
-      .then(data => dispatch((setvideo(data.data.data))))
+    axios.get('http://localhost:4001/video')
+      .then(data =>
+        dispatch((setvideo(data.data)))
+      )
   }
   useEffect(() => {
     getvideo();
 
-  },[])
+  }, [])
 
   return (
     <div className='youtubehome'>

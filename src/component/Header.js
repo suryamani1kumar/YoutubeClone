@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
@@ -31,6 +31,7 @@ function Header() {
     const setNotificationstoggle = useSelector((state) => state.showNotifications)
     const setAccounttoggle = useSelector((state) => state.showAccount)
     const dispatch = useDispatch()
+    const ref = useRef()
     const handleMenu = () => {
         dispatch(showHomeMenuToggle())
     }
@@ -44,6 +45,24 @@ function Header() {
     const handleAccount = () => {
         dispatch(showAccountToggle())
     }
+    useEffect(() => {
+        /**
+         * Alert if clicked on outside of element
+         */
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                alert("You clicked outside of me!");
+            }
+        }
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [ref]);
+
+
     return (
         <div className='header'>
             <div className='menu'>
@@ -115,7 +134,7 @@ function Header() {
                         className='hidden'
                         style={{ width: '80px', position: "absolute", left: "-18px" }}
                     >Create</p>
-                    {  setCreateViedotoggle ?
+                    {setCreateViedotoggle ?
                         <HeaderVideo />
                         : null
                     }

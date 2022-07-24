@@ -32,7 +32,8 @@ class RightSideVideo extends Component {
                 fontSize: '35px'
             },
         }
-
+        this.wrapperRef = React.createRef();
+        this.handleClickOutside = this.handleClickOutside.bind(this);
         this.handleInput = this.handleInput.bind(this)
         this.settingHandle = this.settingHandle.bind(this)
         this.volumehandle = this.volumehandle.bind(this)
@@ -62,14 +63,32 @@ class RightSideVideo extends Component {
         })
     }
 
+    componentDidMount() {
+        document.addEventListener("mousedown", this.handleClickOutside);
+        console.log('Bind the event listener')
+    }
 
+    componentWillUnmount() {
+        document.removeEventListener("mousedown", this.handleClickOutside);
+        console.log('Unbind the event listener on clean up')
+    }
+
+    /**
+     * Alert if clicked on outside of element
+     */
+    handleClickOutside(event) {
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
+            console.log('event', event)
+            this.setState({ showSetting: false })
+        }
+    }
 
     render() {
 
         return (
             <>
                 <Watchv>
-                    <img src='https://th.bing.com/th/id/R.6afc61b50aabe45a2e6c68eae2c217ba?rik=L2W0YWncfjZBVA&riu=http%3a%2f%2fwww.shutterstock.com%2fblog%2fwp-content%2fuploads%2fsites%2f5%2f2016%2f03%2ffall-trees-road-1.jpg&ehk=KA%2bzFrmYoWsdK4k7v%2fgfNkd1T2rdnNtpF5ICdLIxAeM%3d&risl=&pid=ImgRaw&r=0' alt='imageofthemnail'/>
+                    <img src='https://th.bing.com/th/id/R.6afc61b50aabe45a2e6c68eae2c217ba?rik=L2W0YWncfjZBVA&riu=http%3a%2f%2fwww.shutterstock.com%2fblog%2fwp-content%2fuploads%2fsites%2f5%2f2016%2f03%2ffall-trees-road-1.jpg&ehk=KA%2bzFrmYoWsdK4k7v%2fgfNkd1T2rdnNtpF5ICdLIxAeM%3d&risl=&pid=ImgRaw&r=0' alt='imageofthemnail' />
                     <MediaControl>
                         <div>
                             <button onClick={this.playButtonhandle}>
@@ -135,15 +154,17 @@ class RightSideVideo extends Component {
                                     <SubtitlesIcon sx={{ color: '#fff', }} />
                                 </Tooltip>
                             </button>
-                            <button onClick={this.settingHandle} >
+                            <button
+                                onClick={this.settingHandle}
+                                ref={this.wrapperRef}>
                                 <Tooltip
                                     title='Settings'
                                     placement="top">
                                     <Settings sx={{ color: '#fff', fontSize: '25px' }} />
                                 </Tooltip>
                                 {this.state.showSetting
-                                    ? null
-                                    : <Setting />}
+                                    ? <Setting />
+                                    : null}
                             </button>
 
                             <button>
