@@ -1,0 +1,73 @@
+$linecolor: #808080;
+
+.searchfilter {
+    padding: 0 100px;
+
+}
+
+.filter {
+    border-bottom: 1px solid $linecolor;
+    margin-bottom: 3px;
+}
+
+.filter-item {
+    display: flex;
+
+    div {
+        width: 168px;
+        padding-bottom: 2%;
+        padding-right: 32px;
+
+        h6 {
+            display: flex;
+            border-bottom: 1px solid $linecolor;
+            padding: 15px 0;
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.searchvideo {
+    display: flex;
+}
+
+.searchThemnail {
+    width: 375px;
+    height: 205px;
+    padding-right: 10px;
+
+    img {
+        width: 100%;
+        height: 202px;
+        object-fit: cover;
+    }
+}
+
+.searchDescription {
+    width: 680px;
+    cursor: pointer;
+
+    .searchtitle {
+        display: flex;
+        flex-direction: column;
+
+        .searchview {
+            display: flex;
+        }
+    }
+}
+
+.searchchannel {
+    img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
