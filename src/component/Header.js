@@ -6,6 +6,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
 import './header.css';
+import youtubeLogo from '../assets/YouTubelogo.png';
 import { useSelector, useDispatch } from 'react-redux';
 // import Sidebar from './Sidebar';
 import {
@@ -19,7 +20,7 @@ import {
 // import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 // import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 // import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
-import HeaderVideo from './Header/HeaderVideo.tsx';
+import HeaderVideo from './Header/HeaderVideo.js';
 import Notification from './Header/Notification.tsx';
 import Account from './Header/Account.js';
 
@@ -72,7 +73,7 @@ function Header() {
                     />
                 </div>
                 <img
-                    src='../New folder/YouTubelogo.jpg'
+                    src={youtubeLogo}
                     alt='logo'
                     className='youtubelogo' />
                 <p className='hidden'>YouTube Home</p>
