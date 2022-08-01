@@ -23,6 +23,8 @@ import {
 import HeaderVideo from './Header/HeaderVideo.js';
 import Notification from './Header/Notification.tsx';
 import Account from './Header/Account.js';
+import { Tooltip } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 
@@ -72,11 +74,13 @@ function Header() {
                         onClick={handleMenu}
                     />
                 </div>
-                <img
-                    src={youtubeLogo}
-                    alt='logo'
-                    className='youtubelogo' />
-                <p className='hidden'>YouTube Home</p>
+                <Link to='/'>
+                    <img
+                        src={youtubeLogo}
+                        alt='logo'
+                        className='youtubelogo' />
+                    <p className='hidden'>YouTube Home</p>
+                </Link>
                 {/* {setHomeMenutoggle ?
                     <div style={{ position: 'absolute', top: "50px" }}>
                         <div
@@ -126,20 +130,35 @@ function Header() {
                 </div>
             </div>
             <div className='header-right'>
-                <div className='header-icon'
-                    style={{ position: 'relative' }}>
+                {/* <div className='header-icon'
+                >
                     <VideoCallOutlinedIcon
                         onClick={handleVideo}
                     />
-                    <p
-                        className='hidden'
-                        style={{ width: '80px', position: "absolute", left: "-18px" }}
-                    >Create</p>
                     {setCreateViedotoggle ?
                         <HeaderVideo />
                         : null
                     }
+                    <p
+                        className='hidden'
+                        style={{ width: '70px', position: "absolute", left: "-18px" }}
+                    >Create</p>
+                </div> */}
+                <div className='header-icon'>
+                    <Tooltip title='Create'>
+                        <VideoCallOutlinedIcon
+                            onClick={handleVideo}
+                        />
+
+
+                    </Tooltip>
+                    {setCreateViedotoggle ?
+                        <HeaderVideo />
+                        : null
+                    }
+
                 </div>
+
                 <div className='header-icon'>
                     <NotificationsNoneOutlinedIcon
                         onClick={handleNotification} />

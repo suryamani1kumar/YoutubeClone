@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import store from './redux/reducer'
 import { Provider } from 'react-redux';
@@ -14,7 +13,7 @@ import theme from './assets/theme';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Provider store={store}>
         <ThemeProvider theme={theme}>
           <Header />

@@ -1,117 +1,128 @@
 import React, { useState } from 'react'
-import { Maincontainer, Firstcontainer, Secondcontainer } from './styles'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import {
+    Maincontainer,
+    Accountcontainer,
+    PersonalAccountcontainer,
+    Membershipscontainer,
+    LoactionContainer,
+    Sittingcontainer,
+    Helpcontainer
+} from './styles'
+import {
+    AccountCircle,
+    MonetizationOnOutlined,
+    SwitchAccountOutlined,
+    AccountBoxOutlined,
+    SettingsOutlined,
+    TranslateOutlined,
+    KeyboardOutlined,
+    HelpOutline,
+    FeedbackOutlined,
+    Brightness2Outlined,
+    AddModeratorOutlined,
+    LanguageOutlined
+} from '@mui/icons-material';
 import { faArrowRightToBracket, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
-import SwitchAccountOutlinedIcon from '@mui/icons-material/SwitchAccountOutlined';
-import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import TranslateOutlinedIcon from '@mui/icons-material/TranslateOutlined';
-import KeyboardOutlinedIcon from '@mui/icons-material/KeyboardOutlined';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import FeedbackOutlinedIcon from '@mui/icons-material/FeedbackOutlined';
-import Brightness2OutlinedIcon from '@mui/icons-material/Brightness2Outlined';
-import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
-import AddModeratorOutlinedIcon from '@mui/icons-material/AddModeratorOutlined';
 
 
 const Account = () => {
     const [appearance, setAppearance] = useState(false)
-    const [set,setSet]=useState(true)
+    const [set, setSet] = useState(true)
 
     const handleAppearance = () => {
         setAppearance(!appearance)
         setSet(!set)
-        
-
-        
     }
-    // console.log( setAppearance(!appearance))
 
     return (
         <Maincontainer>
-            <Firstcontainer>
-                <AccountCircleIcon />
+            <Accountcontainer>
+                <AccountCircle style={{ marginRight: '16px' }} />
                 <div>
                     <span>Suryamani Kumar</span>
                     <span>Manage your Google Account</span>
                 </div>
-            </Firstcontainer>
-            <Secondcontainer>
+            </Accountcontainer>
+            <PersonalAccountcontainer>
                 <div>
-                    <AccountBoxOutlinedIcon />
+                    <AccountBoxOutlined style={{ marginRight: '16px' }} />
                     <span>Your Channel</span>
                 </div>
                 <div>
-                    <SettingsOutlinedIcon />
+                    <SettingsOutlined style={{ marginRight: '16px' }} />
                     <span>YouTube Studio</span>
                 </div>
                 <div>
-                    <SwitchAccountOutlinedIcon />
+                    <SwitchAccountOutlined style={{ marginRight: '16px' }} />
                     <span>Switch account</span>
                     <FontAwesomeIcon icon={faAngleRight} />
                 </div>
                 <div>
-                    <FontAwesomeIcon icon={faArrowRightToBracket} />
+                    <FontAwesomeIcon icon={faArrowRightToBracket} style={{ marginRight: '20px' }} />
                     <span>Sign out</span>
-
                 </div>
-                <hr />
-                <div>
-                    <MonetizationOnOutlinedIcon />
+            </PersonalAccountcontainer>
+            <Membershipscontainer>
+                <div className='div'>
+                    <MonetizationOnOutlined style={{ marginRight: '16px' }} />
                     <span>Purchases and membership</span>
                 </div>
-                <div>
-                    <AddModeratorOutlinedIcon />
+                <div className='div'>
+                    <AddModeratorOutlined style={{ marginRight: '16px' }} />
                     <span>Your data in YouTube</span>
-
                 </div>
-                <hr />
+            </Membershipscontainer>
+            <LoactionContainer>
                 <div onClick={handleAppearance}>
-                    <Brightness2OutlinedIcon />
+                    <Brightness2Outlined style={{ marginRight: '16px' }} />
                     <span>Appearance: Device theme</span>
+
                     <FontAwesomeIcon icon={faAngleRight} />
+
                     {appearance ?
-                        <div style={{position: 'absolute', top: "50px",}}>
+                        <div style={{ position: 'absolute', top: "50px", }}>
                             abcd
                         </div> :
                         null}
                 </div>
                 <div>
-                    <TranslateOutlinedIcon />
+                    <TranslateOutlined style={{ marginRight: '16px' }} />
                     <span>Language:British English</span>
                     <FontAwesomeIcon icon={faAngleRight} />
                 </div>
                 <div>
-                    <AddModeratorOutlinedIcon />
+                    <AddModeratorOutlined style={{ marginRight: '16px' }} />
                     <span>Restricted Mode: Off</span>
                     <FontAwesomeIcon icon={faAngleRight} />
                 </div>
                 <div>
-                    <LanguageOutlinedIcon />
+                    <LanguageOutlined style={{ marginRight: '16px' }} />
                     <span>Location:India</span>
-                    <FontAwesomeIcon icon={faAngleRight} />
+                    <span><FontAwesomeIcon icon={faAngleRight} /></span>
+
                 </div>
                 <div>
-                    <KeyboardOutlinedIcon />
+                    <KeyboardOutlined style={{ marginRight: '16px' }} />
                     <span>Keyword shortcuts</span>
                 </div>
-                <hr />
+            </LoactionContainer>
+            <Sittingcontainer>
                 <div>
-                    <SettingsOutlinedIcon />
+                    <SettingsOutlined style={{ marginRight: '16px' }} />
                     <span>Setting</span>
                 </div>
-                <hr />
+            </Sittingcontainer>
+            <Helpcontainer>
                 <div>
-                    < HelpOutlineIcon />
+                    < HelpOutline style={{ marginRight: '16px' }} />
                     <span>Help</span>
                 </div>
                 <div>
-                    <FeedbackOutlinedIcon />
+                    <FeedbackOutlined style={{ marginRight: '16px' }} />
                     <span>Send feedback</span>
                 </div>
-            </Secondcontainer>
+            </Helpcontainer>
 
         </Maincontainer>
 

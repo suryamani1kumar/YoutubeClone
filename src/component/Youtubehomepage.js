@@ -4,6 +4,8 @@ import Video from './Video';
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import { setvideo } from '../redux/action'
+import data from './Data';
+
 
 
 
@@ -33,7 +35,7 @@ function Youtubehomepage() {
 
 
         <div className={'youtube-right'}>
-          {daata.map((dates) => {
+          {data.map((dates) => {
             const { Img,
               Timing,
               Title,

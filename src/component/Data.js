@@ -119,6 +119,6 @@ const data = [
         View: '1.9M views',
         Uploadtiming: '1 year ago'
     },
-   ]
+]
 
 export default data

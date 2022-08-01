@@ -68,10 +68,10 @@ class RightSideVideo extends Component {
         console.log('Bind the event listener')
     }
 
-    componentWillUnmount() {
-        document.removeEventListener("mousedown", this.handleClickOutside);
-        console.log('Unbind the event listener on clean up')
-    }
+    // componentWillUnmount() {
+    //     document.removeEventListener("mousedown", this.handleClickOutside);
+    //     console.log('Unbind the event listener on clean up')
+    // }
 
     /**
      * Alert if clicked on outside of element
@@ -81,6 +81,7 @@ class RightSideVideo extends Component {
             console.log('event', event)
             this.setState({ showSetting: false })
         }
+        // console.log(this.wrapperRef.current)
     }
 
     render() {
