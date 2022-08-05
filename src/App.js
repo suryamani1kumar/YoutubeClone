@@ -2,12 +2,13 @@ import { Routes, Route } from 'react-router-dom'
 import store from './redux/reducer'
 import { Provider } from 'react-redux';
 import Header from './component/Header';
-import Youtubehomepage from './component/Youtubehomepage';
+import Youtubehomepage from './page/homepage/Youtubehomepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import WatchVideo from './page/WatchVideo';
-import SearchVideo from './page/SearchVideo';
+import WatchVideo from './page/watchvideo/WatchVideo';
+import SearchVideo from './page/searchvideo/SearchVideo';
 import { ThemeProvider } from '@mui/material';
 import theme from './assets/theme';
+import ShortVideo from './page/shortvideo/ShortVideo';
 
 
 
@@ -21,6 +22,7 @@ function App() {
             <Route path='/' element={<Youtubehomepage />} />
             <Route path='/watchvideo' element={<WatchVideo />} />
             <Route path='/searchvideo' element={<SearchVideo />} />
+            <Route path='/shortvideo' element={<ShortVideo />} />
           </Routes>
         </ThemeProvider>
       </Provider>

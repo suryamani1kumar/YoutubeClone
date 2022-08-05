@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
@@ -8,7 +8,7 @@ import VideoCallOutlinedIcon from '@mui/icons-material/VideoCallOutlined';
 import './header.css';
 import youtubeLogo from '../assets/YouTubelogo.png';
 import { useSelector, useDispatch } from 'react-redux';
-// import Sidebar from './Sidebar';
+import Sidebar from './Sidebar';
 import {
     showHomeMenuToggle,
     showCreateViedoToggle,
@@ -29,6 +29,7 @@ import { Link } from 'react-router-dom';
 
 
 function Header() {
+    const [searchValue, setSearchValue] = useState('')
     // const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
     const setCreateViedotoggle = useSelector((state) => state.showCreateViedo)
     const setNotificationstoggle = useSelector((state) => state.showNotifications)
@@ -117,7 +118,12 @@ function Header() {
             </div>
             <div className='search'>
                 <div className='searchinput'>
-                    <input type='text' placeholder='Search' />
+                    <input
+                        type='text'
+                        placeholder='Search'
+                        value={searchValue}
+                        onChange={(e) => setSearchValue(e.target.value)}
+                    />
                     <SearchIcon
                     />
                     <p className='hidden'>Search</p>

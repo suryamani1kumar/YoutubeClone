@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components';
-import LeftSideVideo from './component/LeftSideVideo';
-import RightSideVideo from './component/RightSideVideo';
+import LeftSideVideo from './LeftSideVideo';
+import RightSideVideo from './RightSideVideo';
 // import axios from 'axios'
 
 

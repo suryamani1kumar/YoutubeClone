@@ -1,33 +1,34 @@
 import React, { useEffect } from 'react'
 import './youtubehomepage.css'
-import Video from './Video';
-import axios from 'axios'
-import { useDispatch, useSelector } from 'react-redux';
-import { setvideo } from '../redux/action'
-import data from './Data';
+import Video from '../../component/Video';
+// import axios from 'axios'
+// import { useDispatch, useSelector } from 'react-redux';
+// import { setvideo } from '../redux/action'
+import data from '../../utils/Data';
+import Sidebar from '../../component/Sidebar';
 
 
 
 
 
 function Youtubehomepage() {
-  const daata = useSelector((state) => state.data)
-  const dispatch = useDispatch()
-  const getvideo = () => {
-    axios.get('http://localhost:4001/video')
-      .then(data =>
-        dispatch((setvideo(data.data)))
-      )
-  }
-  useEffect(() => {
-    getvideo();
+  // const daata = useSelector((state) => state.data)
+  // const dispatch = useDispatch()
+  // const getvideo = () => {
+  //   axios.get('http://localhost:4001/video')
+  //     .then(data =>
+  //       dispatch((setvideo(data.data)))
+  //     )
+  // }
+  // useEffect(() => {
+  //   getvideo();
 
-  }, [])
+  // }, [])
 
   return (
     <div className='youtubehome'>
       <div className='youtube-left'>
-        {/* <Sidebar /> */}
+        <Sidebar />
       </div>
 
 
