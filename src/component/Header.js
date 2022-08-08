@@ -30,7 +30,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     const [searchValue, setSearchValue] = useState('')
-    // const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
+    const setHomeMenutoggle = useSelector((state) => state.showHomeMenu)
     const setCreateViedotoggle = useSelector((state) => state.showCreateViedo)
     const setNotificationstoggle = useSelector((state) => state.showNotifications)
     const setAccounttoggle = useSelector((state) => state.showAccount)
@@ -70,18 +70,20 @@ function Header() {
     return (
         <div className='header'>
             <div className='menu'>
-                <div className='header-icon'>
+                <div className='header-icon' style={{ padding: '8px' }}>
                     <MenuIcon
                         onClick={handleMenu}
                     />
                 </div>
-                <Link to='/'>
-                    <img
-                        src={youtubeLogo}
-                        alt='logo'
-                        className='youtubelogo' />
-                    <p className='hidden'>YouTube Home</p>
-                </Link>
+                <div style={{ padding: '18px 14px 18px 16px' }}>
+                    <Link to='/'>
+                        <img
+                            src={youtubeLogo}
+                            alt='logo'
+                            className='youtubelogo' />
+                    </Link>
+                </div>
+
                 {/* {setHomeMenutoggle ?
                     <div style={{ position: 'absolute', top: "50px" }}>
                         <div
@@ -126,30 +128,13 @@ function Header() {
                     />
                     <SearchIcon
                     />
-                    <p className='hidden'>Search</p>
                 </div>
                 <div className='header-icon bg-light'>
                     <KeyboardVoiceIcon
                         className='voiceIcon' />
-                    <p className='hidden'>Search with your voice</p>
-
                 </div>
             </div>
             <div className='header-right'>
-                {/* <div className='header-icon'
-                >
-                    <VideoCallOutlinedIcon
-                        onClick={handleVideo}
-                    />
-                    {setCreateViedotoggle ?
-                        <HeaderVideo />
-                        : null
-                    }
-                    <p
-                        className='hidden'
-                        style={{ width: '70px', position: "absolute", left: "-18px" }}
-                    >Create</p>
-                </div> */}
                 <div className='header-icon'>
                     <Tooltip title='Create'>
                         <VideoCallOutlinedIcon
@@ -162,16 +147,11 @@ function Header() {
                         <HeaderVideo />
                         : null
                     }
-
                 </div>
-
                 <div className='header-icon'>
                     <NotificationsNoneOutlinedIcon
                         onClick={handleNotification} />
-                    <p
-                        className='hidden'
-                        style={{ width: '100px', position: "absolute", left: '-28px' }}
-                    >Notifications</p>
+
                     {setNotificationstoggle ?
                         <Notification /> :
                         null
@@ -180,10 +160,9 @@ function Header() {
                 <div className='header-icon '>
                     <AccountCircleIcon
                         onClick={handleAccount} />
-                    {
-                        setAccounttoggle ?
-                            <Account /> :
-                            null
+                    {setAccounttoggle ?
+                        <Account /> :
+                        null
                     }
                 </div>
             </div>
