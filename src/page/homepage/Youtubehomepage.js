@@ -27,40 +27,33 @@ function Youtubehomepage() {
 
   return (
     <div className='youtubehome'>
-      <div className='youtube-left'>
-        <Sidebar />
-      </div>
+      <Sidebar />
+      {/* <div className='youtube-right'>
+        {data.map((dates) => {
+          const { Img,
+            Timing,
+            Title,
+            ChannelImg,
+            ChannelName,
+            View,
+            Uploadtiming,
+            id } = dates
+          return (
+            <Video
+              Img={Img}
+              Timing={Timing}
+              Title={Title}
+              ChannelImg={ChannelImg}
+              ChannelName={ChannelName}
+              View={View}
+              Uploadtiming={Uploadtiming}
+              key={id}
+            />
+          )
+        })}
 
 
-      <div className='youtube-right'>
-
-
-        <div className={'youtube-right'}>
-          {data.map((dates) => {
-            const { Img,
-              Timing,
-              Title,
-              ChannelImg,
-              ChannelName,
-              View,
-              Uploadtiming,
-              id } = dates
-            return (
-              <Video
-                Img={Img}
-                Timing={Timing}
-                Title={Title}
-                ChannelImg={ChannelImg}
-                ChannelName={ChannelName}
-                View={View}
-                Uploadtiming={Uploadtiming}
-                key={id}
-              />
-            )
-          })}
-        </div>
-
-      </div>
+      </div> */}
 
     </div>
   )

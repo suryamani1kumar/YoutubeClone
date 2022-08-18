@@ -1,0 +1,28 @@
+.sidebar {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+}
+
+.sidebarContainer {
+    padding-right: 5px;
+}
+
+.main-list {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 240px;
+
+}
+
+.list {
+    display: block;
+    width: 100%;
+}
+
+.main-list:hover {
+    background-color: #e5e5e5;
+}

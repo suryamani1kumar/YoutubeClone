@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import store from './redux/reducer'
+import store from './redux/store'
 import { Provider } from 'react-redux';
 import Header from './component/Header';
 import Youtubehomepage from './page/homepage/Youtubehomepage';

@@ -38,7 +38,7 @@ div{
     display:flex;
     align-items:center;
     &:hover{
-        background:#D3D3D3;
+        background:#e5e5e5;
     }
 }
     
