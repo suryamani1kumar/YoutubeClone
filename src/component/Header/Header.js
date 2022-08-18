@@ -12,23 +12,23 @@ import {
     AccountCircle
 } from '@mui/icons-material';
 import './header.css';
-import youtubeLogo from '../assets/YouTubelogo.png';
+import youtubeLogo from '../../assets/YouTubelogo.png';
 import { useSelector, useDispatch } from 'react-redux';
-import Sidebar from './Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 import {
     showHomeMenuToggle,
     showCreateViedoToggle,
     showNotificationsToggle,
     showAccountToggle
-} from '../redux/action'
+} from '../../redux/action'
 import HomeIcon from '@mui/icons-material/Home';
 import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SubscriptionsOutlinedIcon from '@mui/icons-material/SubscriptionsOutlined';
 import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
-import HeaderVideo from './Header/HeaderVideo.js';
-import Notification from './Header/Notification.tsx';
-import Account from './Header/Account.js';
+import HeaderVideo from './HeaderVideo.js';
+import Notification from './Notification.tsx';
+import Account from './Account.js';
 import { Tooltip, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 
@@ -68,7 +68,7 @@ function Header() {
         }
         document.addEventListener('mousedown', handleClickOutside)
     }, [Notifications])
-    
+
     return (
         <div className='header'>
             <div className='menu'>

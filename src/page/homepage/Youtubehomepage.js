@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react'
 import './youtubehomepage.css'
-import Video from '../../component/Video';
+import Video from '../../component/video/Video';
 // import axios from 'axios'
 // import { useDispatch, useSelector } from 'react-redux';
 // import { setvideo } from '../redux/action'
 import data from '../../utils/Data';
-import Sidebar from '../../component/Sidebar';
-
-
-
-
+import Sidebar from '../../component/sidebar/Sidebar';
 
 function Youtubehomepage() {
   // const daata = useSelector((state) => state.data)

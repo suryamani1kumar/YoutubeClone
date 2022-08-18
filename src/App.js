@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import store from './redux/store'
 import { Provider } from 'react-redux';
-import Header from './component/Header';
+import Header from './component/Header/Header';
 import Youtubehomepage from './page/homepage/Youtubehomepage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WatchVideo from './page/watchvideo/WatchVideo';
